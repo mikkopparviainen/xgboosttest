@@ -79,7 +79,13 @@ def train_test_split(data, n_test: int) -> numpy.array:
 
 
 # fit an xgboost model and make a one-step prediction
-def xgboost_forecast(train, testX):
+def xgboost_forecast(train: list, testX: numpy.array) -> float:
+    """
+    trains extreme gradient boost model and returns prediction one-time step forward
+    :param train: time-sequence organized a matrix (lists within a list, transformed into a 2D numpy array)
+    :param testX: 1-D numpy array
+    :return: one-time step prediction
+    """
     # transform list into array
     train = asarray(train)
     # split into input and output columns
@@ -115,12 +121,8 @@ def walk_forward_validation(data, n_test):
     error = mean_absolute_error(test[:, -1], predictions)
     return error, test[:, -1], predictions
 
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     series, values = read_data()
-    # series = read_csv('daily-total-female-births.csv', header=0, index_col=0)
-    # values = series.values
 
     # transform the time series data into supervised learning
     data = series_to_supervised(values, n_in=6)
@@ -134,5 +136,3 @@ if __name__ == '__main__':
     plt.plot(yhat, label='Predicted')
     plt.legend()
     plt.show()
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
