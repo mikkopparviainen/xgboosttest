@@ -1,7 +1,7 @@
 # forecast monthly births with xgboost
 # Taken from
 # https://machinelearningmastery.com/xgboost-for-time-series-forecasting/
-
+import numpy
 from numpy import asarray
 from pandas import read_csv
 from pandas import DataFrame
@@ -68,9 +68,13 @@ def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
     return agg.values
 
 
-# split a univariate dataset into train/test sets
-# split a univariate dataset into train/test sets
-def train_test_split(data, n_test):
+def train_test_split(data, n_test: int) -> numpy.array:
+    """
+    split the data from beginning leaving the last n_test time instants to test and the rest for training.
+    :param data:
+    :param n_test:
+    :return:
+    """
     return data[:-n_test, :], data[-n_test:, :]
 
 
