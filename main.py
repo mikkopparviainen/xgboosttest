@@ -71,8 +71,8 @@ def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
 def train_test_split(data, n_test: int) -> numpy.array:
     """
     split the data from beginning leaving the last n_test time instants to test and the rest for training.
-    :param data:
-    :param n_test:
+    :param data: numpy matrix created with series_to_supervised function
+    :param n_test: int number of data samples in the test set
     :return:
     """
     return data[:-n_test, :], data[-n_test:, :]
