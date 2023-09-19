@@ -41,7 +41,8 @@ def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
     :param n_in: the number of time steps before the current time + n_out time steps
     :param n_out:the number of time steps after the current time step
     :param dropnan: drop any columns of a dataframe containing NaNs
-    :return: return a matrix transformed supervised learning task. The first n_in columns are "X_train" and n_out columns y_train i.e. target.
+    :return: return a matrix transformed supervised learning task. The first n_in columns are "X_train" and n_out
+             columns y_train i.e. target.
     array([[nan, nan, nan, nan, nan, nan, 35.],
        [nan, nan, nan, nan, nan, 35., 32.],
        [nan, nan, nan, nan, 35., 32., 30.],
@@ -120,6 +121,7 @@ def walk_forward_validation(data, n_test):
     # estimate prediction error
     error = mean_absolute_error(test[:, -1], predictions)
     return error, test[:, -1], predictions
+
 
 if __name__ == '__main__':
     series, values = read_data()
