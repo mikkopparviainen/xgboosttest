@@ -8,11 +8,12 @@ xboosttest explores extreme boost test algorithm for time series prediction. Thi
 - [`daily-total-female-births.csv`](./daily-total-female-births.csv)
 - [`main.py`](./main.py)
 
-## Development
+## Instructions
 
-1. Create new virtual environment with conda: `conda create -n py_310 python=3.10`
-2. Active the environment: `conda activate py_310`
-3. Install python packages; `pip install -r requirements_xgboostest.txt`
+1. Install Anaconda [https://docs.anaconda.com/free/anaconda/install/index.html](https://docs.anaconda.com/free/anaconda/install/index.html). Probably, `miniconda` will do as well: [https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html) (not tested).
+2. Create new virtual environment with conda: `conda create -n py_310 python=3.10`
+3. Active the environment: `conda activate py_310`
+4. Install python packages; `pip install -r requirements_xgboostest.txt`
 
 ### Tests
 
