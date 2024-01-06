@@ -4,7 +4,6 @@ xboosttest explores extreme boost test algorithm for time series prediction. Thi
 
 ## What's included
 
-- daily-total-female-births.csv  main.html  main.py
 - [`daily-total-female-births.csv`](./daily-total-female-births.csv)
 - [`main.py`](./main.py)
 
