@@ -1,6 +1,6 @@
 # xgboostest
 
-xboosttest explores extreme boost test algorithm for time series prediction. This is taken from a blog post by Jason Brownlee on March 19, 2021 in XGBoost [https://machinelearningmastery.com/xgboost-for-time-series-forecasting/](https://machinelearningmastery.com/xgboost-for-time-series-forecasting/) appended with my own comments.
+xboosttest explores extreme boost test algorithm for time series prediction. This is taken from a blog post by Jason Brownlee on March 19, 2021 in XGBoost [https://machinelearningmastery.com/xgboost-for-time-series-forecasting/](https://machinelearningmastery.com/xgboost-for-time-series-forecasting/) augmented with my own comments.
 
 ## What's included
 
